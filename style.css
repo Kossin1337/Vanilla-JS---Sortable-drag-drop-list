@@ -6,3 +6,99 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+body {
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 700;
+}
+
+/* UL */
+.draggable-list {
+  list-style-type: none;
+  border: 2px solid #121212;
+}
+
+.draggable-list li:not(:last-child) {
+  border-bottom: 2px solid #343434;
+}
+
+/* UL > LI */
+.draggable-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable-list-item.over .draggable-item {
+  background-color: #eaeaea;
+}
+
+.draggable-item {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 25px 12px 10px;
+  flex: 1;
+}
+
+.draggable-item i {
+  margin: 0 0 0 1rem;
+}
+
+.draggable-list .number {
+  background-color: rgba(12, 12, 12, 0.95);
+  color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 50px;
+  width: 50px;
+}
+
+.draggable-list li.right .list-element-name {
+  color: rgb(48, 197, 48);
+}
+
+.draggable-list li.wrong .list-element-name {
+  color: rgb(139, 28, 28);
+}
+
+.check-btn {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
+  font-weight: 1.1rem;
+  background-color: green;
+  color: #fefefe;
+  border: 1px solid green;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.check-btn:hover {
+  color: green;
+  background-color: #fefefe;
+  transform: scale(1.05);
+}
+
+.check-btn:focus {
+  outline: none;
+}
